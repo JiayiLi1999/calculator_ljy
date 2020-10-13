@@ -11,7 +11,7 @@ public class Navigator{
     private NavigatorMenu menu=new NavigatorMenu();
     public JPanel init(){
         JPanel navigator=new JPanel();
-       navigator.setLayout(new BorderLayout(3, 5));
+       navigator.setLayout(new BorderLayout(6, 5));
        navigator.add("North",menu);
        return navigator;
     }

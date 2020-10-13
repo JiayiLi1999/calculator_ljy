@@ -14,8 +14,8 @@ public class Transformer {
     private MyTextField rawText = new MyTextField("0",2);
     private ClearButton clearButton=new ClearButton();
     private DeleteButton deleteButton=new DeleteButton();
-    private  final String[] NUMBERKEYS = {  "7", "8", "9", "4", "5", "6",
-            "1", "2", "3", "0","","" };
+    private  final String[] NUMBERKEYS = {  "1", "2", "3", "4", "5", "6",
+            "7", "8", "9", "0","","" };
     private NumberButton[] numberButtons=new NumberButton[NUMBERKEYS.length];
     private PointButton pointButton=new PointButton(postfix,rawText);
     private TransMenu menu;
@@ -38,6 +38,7 @@ public class Transformer {
         numberButtons[11].setEnabled(false);
         clearButton.transformerListener(postfix,rawText,resultText);
         deleteButton.transformerListener(postfix,rawText,resultText,label);
+
         JPanel showPanel=new GeneralPanel();
         showPanel.setLayout(new GridLayout(5, 1, 3, 3));
         showPanel.add(menu);
@@ -45,7 +46,6 @@ public class Transformer {
         showPanel.add(unitsComboBoxes[0]);
         showPanel.add(resultText);
         showPanel.add(unitsComboBoxes[1]);
-//        showPanel.add(label);
 
         JPanel padPanel = new HasakiPanel();
         // 用网格布局器，4行，4列的网格，网格之间的水平方向间隔为3个象素，垂直方向间隔为3个象素

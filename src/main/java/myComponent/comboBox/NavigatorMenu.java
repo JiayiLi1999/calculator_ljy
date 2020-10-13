@@ -8,10 +8,12 @@ public class NavigatorMenu extends JComboBox<String> {
 //    陈氢start
     public NavigatorMenu(){
         super();
-        this.addItem("科学计算器");
-        this.addItem("程序员计算器");
-        this.addItem("转换器");
-        this.setOpaque(true);
+        this.addItem("计算器");
+        this.addItem("单位转换");
+        this.addItem("方程计算");
+        this.addItem("生成随机数");
+        this.addItem("数独游戏");
+        this.addItem("上传背景");
         this.setUI(new MyComboBoxUI("arrow.png"));
     }
 //    陈氢end
