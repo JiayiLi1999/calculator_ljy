@@ -4,26 +4,27 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BasePanel extends JFrame{
-//    陈氢start
+
     public static void main(String[] args) {
         new BasePanel();
     }
     /** 计算结果文本框 */
     private Science science=new Science();
+    private int i =0;
     private Transformer transformer=new Transformer();
     private Navigator navigator=new Navigator();
     public BasePanel(){
         super();
         // 初始化计算器
         init();
-        // 设置计算器的背景颜色
-        this.setTitle("Q宝");
+        // 设置计算器的标题
+        this.setTitle("Calculator");
         // 在屏幕(500, 300)坐标处显示计算器
         this.setLocation(500, 300);
-        this.setSize(350,420);
+        this.setSize(365,450);
         // 不许修改计算器的大小
         this.setResizable(false);
-        this.setIconImage(new ImageIcon("src/main/resources/Q.png").getImage());
+        //this.setIconImage(new ImageIcon("src/main/resources/Q.png").getImage());
         //关闭退出
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
@@ -56,5 +57,4 @@ public class BasePanel extends JFrame{
             }
         });
     }
-//    陈氢end
 }

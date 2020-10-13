@@ -7,7 +7,7 @@ import javax.swing.plaf.basic.ComboPopup;
 import java.awt.*;
 
 public class MyComboBoxUI extends BasicComboBoxUI {
-//    陈氢start
+
     private ImageIcon DOWN_ICON;
     private static Color DEFAULT_COLOR = new Color(150, 207, 254);
     public MyComboBoxUI(String filename){
@@ -78,5 +78,5 @@ public class MyComboBoxUI extends BasicComboBoxUI {
         popup.setBorder(BorderFactory.createLineBorder(DEFAULT_COLOR));
         return popup;
     }
-//    陈氢end
+
 }

@@ -1,7 +1,7 @@
 package utils;
 
 public class Constant {
-//    陈氢start
+
     public static final double[][] LENGTH= {
             /*微米*/    {1.0, 1e-3, 1e-4,1e-6,1e-9,3.9370079e-5,3.2808399e-6,6.2137119e-10,5.399568e-10},
             /*毫米*/    {1e3,1.0,1e-1,1e-3,1e-6,3.9370079e-2,3.2808399e-3,6.2137119e-7,5.399568e-7},
@@ -23,5 +23,5 @@ public class Constant {
             /*克拉*/    {2e-1,4e-4,2e-4,2e-7,7.0548e-3,4.4092e-4,1.0}
     };
 
-//    陈氢end
+
 }

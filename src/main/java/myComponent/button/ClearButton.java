@@ -3,10 +3,10 @@ package myComponent.button;
 import myComponent.MyTextField;
 
 public class ClearButton extends MyButton {
-//    陈氢start
+
     public ClearButton(){
         super();
-        this.setText("C");
+        this.setText("AC");
     }
     public void generalListener(StringBuilder postfix, MyTextField resultText){
         this.addActionListener(e -> {
@@ -23,5 +23,5 @@ public class ClearButton extends MyButton {
             resultText.setText("");
         });
     }
-//    陈氢end
+
 }

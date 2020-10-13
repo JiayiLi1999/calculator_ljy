@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MyListCellRenderer implements ListCellRenderer {
-//    陈氢start
+
     private DefaultListCellRenderer defaultCellRenderer = new DefaultListCellRenderer();
     @Override
     public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -29,5 +29,5 @@ public class MyListCellRenderer implements ListCellRenderer {
         list.setBorder(null);
         return renderer;
     }
-//    陈氢end
+
 }

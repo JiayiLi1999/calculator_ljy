@@ -7,9 +7,9 @@ import utils.Constant;
 public class DeleteButton extends MyButton {
     public DeleteButton(){
         super();
-        this.setText("◁");
+        this.setText("DEL");
     }
-    //靳辰辰 start
+
     private boolean twoSymbol(StringBuilder postfix){
         boolean flag = false;
         int len = postfix.length();
@@ -97,8 +97,7 @@ public class DeleteButton extends MyButton {
             }
         });
     }
-//    靳辰辰 end
-//    陈氢start
+
     public void transformerListener(StringBuilder postfix, MyTextField rawText,MyTextField resultText, TransLabel label){
         this.addActionListener(e -> {
             int len = postfix.length();
@@ -115,5 +114,5 @@ public class DeleteButton extends MyButton {
 
         });
     }
-//    陈氢end
+
 }

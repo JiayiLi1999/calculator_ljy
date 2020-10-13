@@ -5,7 +5,7 @@ import myComponent.decoration.MyComboBoxUI;
 import javax.swing.*;
 
 public class NavigatorMenu extends JComboBox<String> {
-//    陈氢start
+
     public NavigatorMenu(){
         super();
         this.addItem("计算器");
@@ -16,5 +16,5 @@ public class NavigatorMenu extends JComboBox<String> {
         this.addItem("上传背景");
         this.setUI(new MyComboBoxUI("arrow.png"));
     }
-//    陈氢end
+
 }

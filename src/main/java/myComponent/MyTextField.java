@@ -4,7 +4,7 @@ import javax.swing.JTextField;
 import java.awt.*;
 
 public class MyTextField extends JTextField {
-//    陈氢start
+
     public MyTextField(String name,int RorL){
         super();
         this.setText(name);
@@ -12,10 +12,13 @@ public class MyTextField extends JTextField {
         this.setHorizontalAlignment(RorL);
         // 不允许修改结果文本框
         this.setEditable(false);
-        this.setFont(new Font("宋体",Font.BOLD,20));
+        // 设置文本框的字体
+        this.setFont(new Font("ARIAL",Font.BOLD,22));
         // 设置文本框背景颜色为透明
-        this.setOpaque(true);
+        //this.setOpaque(false);
+        //设置背景
+        this.setBackground(new Color(255,250,250));
 
     }
-//    陈氢end
+
 }

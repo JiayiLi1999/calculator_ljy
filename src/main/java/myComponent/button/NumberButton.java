@@ -9,7 +9,7 @@ import utils.*;
 @Getter
 @Setter
 public class NumberButton extends MyButton {
-//    陈氢start
+
     private double stoNumber=0.0;
     public NumberButton(String name){
         super();
@@ -24,25 +24,7 @@ public class NumberButton extends MyButton {
             resultText.setText(postfix.toString());
         });
     }
-    public void STOListener(MyTextField resultText){
-        this.removeActionListener(this.getActionListeners()[0]);
-        this.addActionListener(e -> {
-            Postfix exp = new Postfix(resultText.getText());
-            String postfix;
-            postfix = exp.nifixToPostfix();
-            Compute ans = new Compute(postfix);
-            stoNumber = ans.compute();
 
-        });
-    }
-
-    public void RCLListener(MyTextField resultText,StringBuilder postfix){
-        this.removeActionListener(this.getActionListeners()[0]);
-        this.addActionListener(e -> {
-             postfix.append(stoNumber);
-             resultText.setText(postfix.toString());
-        });
-    }
     public void transformerListener(String name, StringBuilder postfix, MyTextField rawText, MyTextField resultText, TransLabel label){
         this.addActionListener(e -> {
             postfix.append(name);
@@ -54,5 +36,5 @@ public class NumberButton extends MyButton {
             }
         });
     }
-//    陈氢end
+
 }

@@ -11,7 +11,7 @@ import utils.*;
 @Getter
 @Setter
 public class ResultButton extends MyButton {
-//靳辰辰start
+
     private int system=16;
     public ResultButton(String name){
         super();
@@ -105,5 +105,5 @@ public class ResultButton extends MyButton {
 
         });
     }
-    //靳辰辰 end
+
 }

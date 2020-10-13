@@ -7,8 +7,7 @@ public class PointButton extends MyButton {
         super();
         this.setText(".");
         this.addActionListener(e -> {
-            //靳辰辰start
-//            this.setEnabled(false);
+
             boolean flag = false,flag2 = false;
             for (int i = postfix.length()-1;i >= 0;i--) {
                 if (postfix.charAt(i) == '.') {
@@ -32,6 +31,6 @@ public class PointButton extends MyButton {
             }
 
         });
-        //靳辰辰end
+
     }
 }
