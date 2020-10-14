@@ -27,9 +27,7 @@ public class DeleteButton extends MyButton {
         int len = postfix.length();
         if (len >= 3){
             String str = postfix.substring(len-3,len);
-            if (str.equals("sin")||str.equals("cos")||str.equals("tan")||
-                    str.equals("sec")||str.equals("csc")||str.equals("cot")
-                    ||str.equals("log")||str.equals("exp")){
+            if (str.equals("sin")||str.equals("cos")||str.equals("tan") ||str.equals("log")){
                 flag = true;
             }
         }
@@ -41,7 +39,7 @@ public class DeleteButton extends MyButton {
         int len = postfix.length();
         if (len >= 4){
             String str = postfix.substring(len-4,len);
-            if (str.equals("sqrt")||str.equals("cbrt")||str.equals("blog")){
+            if (str.equals("sqrt")){
                 flag = true;
             }
         }
@@ -49,18 +47,7 @@ public class DeleteButton extends MyButton {
         return flag;
     }
 
-    private boolean fiveSymbol(StringBuilder postfix){
-        boolean flag = false;
-        int len = postfix.length();
-        if (len >= 5){
-            String str = postfix.substring(len-5,len);
-            if (str.equals("yroot")){
-                flag = true;
-            }
-        }
 
-        return flag;
-    }
     public void generalListener(StringBuilder postfix, MyTextField resultText){
         this.addActionListener(e -> {
             int len = postfix.length();
@@ -73,11 +60,8 @@ public class DeleteButton extends MyButton {
             }
             if (len >= 2){
                 System.out.println(len);
-                if (fiveSymbol(postfix)){
-                    postfix.delete(len-5,len);
-                    resultText.setText(postfix.toString());
-                }
-                else if (fourSymbol(postfix)){
+
+                if (fourSymbol(postfix)){
                     postfix.delete(len-4,len);
                     resultText.setText(postfix.toString());
                 }
