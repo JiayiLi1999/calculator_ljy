@@ -14,8 +14,8 @@ public class Transformer {
     private MyTextField rawText = new MyTextField("0",2);
     private ClearButton clearButton=new ClearButton();
     private DeleteButton deleteButton=new DeleteButton();
-    private  final String[] NUMBERKEYS = {  "1", "2", "3", "4", "5", "6",
-            "7", "8", "9", "0","","" };
+    private  final String[] NUMBERKEYS = {  "0", "1", "2", "3", "4", "5", "6",
+            "7", "8", "9"};
     private NumberButton[] numberButtons=new NumberButton[NUMBERKEYS.length];
     private PointButton pointButton=new PointButton(postfix,rawText);
     private TransMenu menu;
@@ -24,6 +24,7 @@ public class Transformer {
     private TransLabel label;
 
     public JPanel init(){
+        // 初始化各个部件
         label=new TransLabel();
         unitsComboBoxes[0]=new UnitsComboBox();
         unitsComboBoxes[1]=new UnitsComboBox();
@@ -33,11 +34,15 @@ public class Transformer {
         for (int i = 0; i < NUMBERKEYS.length; i++) {
             numberButtons[i] = new NumberButton(NUMBERKEYS[i]);
             numberButtons[i].transformerListener(NUMBERKEYS[i],postfix,rawText,resultText,label);
+            numberButtons[i].setBackground(new Color(245, 245, 245));
         }
-        numberButtons[10].setEnabled(false);
-        numberButtons[11].setEnabled(false);
+
         clearButton.transformerListener(postfix,rawText,resultText);
         deleteButton.transformerListener(postfix,rawText,resultText,label);
+
+        clearButton.setBackground(new Color(255,222,173));
+        deleteButton.setBackground(new Color(255,222,173));
+        pointButton.setBackground(new Color(245, 245, 245));
 
         JPanel showPanel=new GeneralPanel();
         showPanel.setLayout(new GridLayout(5, 1, 3, 3));
@@ -47,19 +52,28 @@ public class Transformer {
         showPanel.add(resultText);
         showPanel.add(unitsComboBoxes[1]);
 
-        JPanel padPanel = new HasakiPanel();
-        // 用网格布局器，4行，4列的网格，网格之间的水平方向间隔为3个象素，垂直方向间隔为3个象素
-        padPanel.setLayout(new GridLayout(5, 3, 3, 3));
-        padPanel.add(numberButtons[10]);padPanel.add(clearButton);padPanel.add(deleteButton);
-        padPanel.add(numberButtons[0]);padPanel.add(numberButtons[1]);padPanel.add(numberButtons[2]);
-        padPanel.add(numberButtons[3]);padPanel.add(numberButtons[4]);padPanel.add(numberButtons[5]);
-        padPanel.add(numberButtons[6]);padPanel.add(numberButtons[7]);padPanel.add(numberButtons[8]);
-        padPanel.add(numberButtons[11]);padPanel.add(numberButtons[9]);padPanel.add(pointButton);
+        JPanel buttonPanel1 = new GeneralPanel();
+        buttonPanel1.setLayout(new GridLayout(1,4,2,2));
+        buttonPanel1.add(numberButtons[0]);buttonPanel1.add(pointButton);buttonPanel1.add(clearButton);buttonPanel1.add(deleteButton);
+
+        JPanel buttonPanel2 = new GeneralPanel();
+        // 用网格布局器，3行，3列的网格，网格之间的水平方向间隔为3个象素，垂直方向间隔为3个象素
+        buttonPanel2.setLayout(new GridLayout(3, 3, 3, 3));
+        buttonPanel2.add(numberButtons[1]);buttonPanel2.add(numberButtons[2]);buttonPanel2.add(numberButtons[3]);
+        buttonPanel2.add(numberButtons[4]);buttonPanel2.add(numberButtons[5]);buttonPanel2.add(numberButtons[6]);
+        buttonPanel2.add(numberButtons[7]);buttonPanel2.add(numberButtons[8]);buttonPanel2.add(numberButtons[9]);
+
+        JPanel buttonPanel = new GeneralPanel();
+        buttonPanel.setLayout(new BorderLayout(3,3));
+        buttonPanel.add("Center",buttonPanel1);
+        buttonPanel.add("South", buttonPanel2);
 
         JPanel transformer=new GeneralPanel();
-        transformer.setLayout(new BorderLayout(3, 5));
+        transformer.setLayout(new BorderLayout(4, 25));
         transformer.add("North",showPanel);
-        transformer.add("South", padPanel);
+        transformer.add("Center",buttonPanel);
+
+        transformer.setBackground(Color.white);
 
         return transformer;
     }

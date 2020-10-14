@@ -39,9 +39,10 @@ public class Science{
         for (int i = 0; i <RESULTKEYS.length; i++) {
             resultButtons[i] = new ResultButton(RESULTKEYS[i]);
             resultButtons[i].scienceListener(RESULTKEYS[i],postfix,resultText);
-            //设置等号为蓝色
+
+            //设置等号为蓝色，其他为灰色
             if(i<3)
-                resultButtons[i].setBackground(new Color(232,232,232));
+                resultButtons[i].setBackground(new Color(245, 245, 245));
             else
                 resultButtons[i].setBackground(new Color(126, 192, 238));//蓝色
         }
@@ -53,16 +54,17 @@ public class Science{
             if (i<10)
                 numberButtons[i].setBackground(Color.WHITE);
             else
-                numberButtons[i].setBackground(new Color(232,232,232));
+                numberButtons[i].setBackground(new Color(245, 245, 245));
         }
 
         //        初始化16个运算符按钮
         for (int i = 0; i <OPERATORKEYS.length; i++) {
             operatorButtons[i] = new OperatorButton(OPERATORKEYS[i],OPERATORS[i],postfix,resultText,pointButton);
             // 设置颜色
-            operatorButtons[i].setBackground(new Color(	232,232,232));
+            operatorButtons[i].setBackground(new Color(	245, 245, 245));
         }
 
+        // 初始化后退、清除按钮
         clearButton=new ClearButton();
         deleteButton=new DeleteButton();
         pointButton=new PointButton(postfix,resultText);
@@ -89,6 +91,7 @@ public class Science{
         science.setLayout(new BorderLayout(3, 5));
         science.add("South",padPanel);
         science.add("Center",resultText);
+
 
 
         return science;
