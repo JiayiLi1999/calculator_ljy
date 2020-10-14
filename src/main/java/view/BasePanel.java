@@ -42,12 +42,12 @@ public class BasePanel extends JFrame{
                     container.revalidate();
                     break;
                 }
-                case 1:{
-                    container.remove(1);
-                    container.add("South", transformer.init());
-                    container.revalidate();
-                    break;
-                }
+//                case 1:{
+//                    container.remove(1);
+//                    container.add("South", transformer.init());
+//                    container.revalidate();
+//                    break;
+//                }
                 default: {
                     container.remove(1);
                     container.add("South", transformer.init());

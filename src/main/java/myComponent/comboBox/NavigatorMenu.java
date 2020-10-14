@@ -10,6 +10,7 @@ public class NavigatorMenu extends JComboBox<String> {
         super();
         this.addItem("计算器");
         this.addItem("单位转换");
+        this.addItem("时区转换");
         this.addItem("方程计算");
         this.addItem("生成随机数");
         this.addItem("数独游戏");

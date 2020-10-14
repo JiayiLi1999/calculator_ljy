@@ -59,7 +59,6 @@ public class Transformer {
         JPanel transformer=new GeneralPanel();
         transformer.setLayout(new BorderLayout(3, 5));
         transformer.add("North",showPanel);
-        transformer.add("Center",label);
         transformer.add("South", padPanel);
 
         return transformer;
