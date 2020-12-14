@@ -15,9 +15,9 @@ public class MyTextField extends JTextField {
         // 设置文本框的字体
         this.setFont(new Font("ARIAL",Font.BOLD,22));
         // 设置文本框背景颜色为透明
-        //this.setOpaque(false);
+        this.setOpaque(false);
         //设置背景
-        this.setBackground(new Color(255,250,250));
+        //this.setBackground(new Color(255,250,250));
 
     }
 
