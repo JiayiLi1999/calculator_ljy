@@ -29,3 +29,10 @@ Change the background of the calculator
 Click the button to upload the local image to the program as the background for the calculator.
 * Sudoku<br> 
 Click the button to go to the front page for the sudoku game.
+## Examples
+![img](https://github.com/andyBrent/calculator_ljy/blob/master/gifs/calculator.png)
+![img](https://github.com/andyBrent/calculator_ljy/blob/master/gifs/trans.png)
+![img](https://github.com/andyBrent/calculator_ljy/blob/master/gifs/trans2.png)
+![img](https://github.com/andyBrent/calculator_ljy/blob/master/gifs/trans3.png)
+![img](https://github.com/andyBrent/calculator_ljy/blob/master/gifs/equation.png)
+![img](https://github.com/andyBrent/calculator_ljy/blob/master/gifs/sudoku.png)
